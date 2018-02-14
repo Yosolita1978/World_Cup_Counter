@@ -10,6 +10,9 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamA = 0;
     int yellowCardTeamA = 0;
     int redCardTeamA = 0;
+    int scoreTeamB = 0;
+    int yellowCardTeamB = 0;
+    int redCardTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         displayGoalForTeamA(scoreTeamA);
         displayYellowCardsForTeamA(yellowCardTeamA);
         displayRedCardsForTeamA(redCardTeamA);
+        displayGoalForTeamB(scoreTeamB);
+        displayYellowCardsForTeamB(yellowCardTeamB);
+        displayRedCardsForTeamB(redCardTeamB);
     }
 
 
@@ -28,10 +34,16 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamA = 0;
         yellowCardTeamA = 0;
         redCardTeamA = 0;
+        scoreTeamB = 0;
+        yellowCardTeamB = 0;
+        redCardTeamB = 0;
 
         displayGoalForTeamA(scoreTeamA);
         displayYellowCardsForTeamA(yellowCardTeamA);
         displayRedCardsForTeamA(redCardTeamA);
+        displayGoalForTeamB(scoreTeamB);
+        displayYellowCardsForTeamB(yellowCardTeamB);
+        displayRedCardsForTeamB(redCardTeamB);
     }
 
     /**
@@ -50,7 +62,11 @@ public class MainActivity extends AppCompatActivity {
      * Plus one on the given red card for Team A.
      */
     public void oneRedCardForTeamA(View v) {
-        redCardTeamA = redCardTeamA + 1;
+        if (redCardTeamA >= 11){
+            redCardTeamA = 11;
+        } else{
+            redCardTeamA = redCardTeamA + 1;
+        }
         displayRedCardsForTeamA(redCardTeamA);
     }
 
@@ -116,5 +132,93 @@ public class MainActivity extends AppCompatActivity {
     public void displayGoalForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.goals_team_a);
         scoreView.setText(String.valueOf(scoreTeamA));
+    }
+
+    /**
+     * Minus one on the given red card for Team B.
+     */
+    public void minusRedCardForTeamB(View v) {
+        if (redCardTeamB <= 0){
+            redCardTeamB = 0;
+        } else {
+            redCardTeamB = redCardTeamB - 1;
+        }
+        displayRedCardsForTeamB(redCardTeamB);
+    }
+
+    /**
+     * Plus one on the given red card for Team B.
+     */
+    public void oneRedCardForTeamB(View v) {
+        if (redCardTeamB >= 11){
+            redCardTeamB = 11;
+        } else{
+            redCardTeamB = redCardTeamB + 1;
+        }
+        displayRedCardsForTeamB(redCardTeamB);
+    }
+
+    /**
+     * Displays the given red cards for Team B.
+     */
+    public void displayRedCardsForTeamB(int score) {
+        TextView redCardsView = (TextView) findViewById(R.id.red_cards_team_b);
+        redCardsView.setText(String.valueOf(redCardTeamB));
+    }
+
+    /**
+     * Minus one on the given yellow card for Team B.
+     */
+    public void minusYellowCardForTeamB(View v) {
+        if (yellowCardTeamB <= 0){
+            yellowCardTeamB = 0;
+        } else {
+            yellowCardTeamB = yellowCardTeamB - 1;
+        }
+        displayYellowCardsForTeamB(yellowCardTeamB);
+    }
+
+    /**
+     * Plus one on the given yellow card for Team B.
+     */
+    public void oneYellowCardForTeamB(View v) {
+        yellowCardTeamB = yellowCardTeamB + 1;
+        displayYellowCardsForTeamB(yellowCardTeamB);
+    }
+
+    /**
+     * Displays the given yellow cards for Team B.
+     */
+    public void displayYellowCardsForTeamB(int score) {
+        TextView yellowCardsView = (TextView) findViewById(R.id.yellow_cards_team_b);
+        yellowCardsView.setText(String.valueOf(yellowCardTeamB));
+    }
+
+    /**
+     * Minus one on the given score for Team B.
+     */
+    public void minusOneGoalForTeamB(View v) {
+        if (scoreTeamB <= 0){
+            scoreTeamB = 0;
+        } else {
+            scoreTeamB = scoreTeamB - 1;
+        }
+        displayGoalForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Plus one on the given score for Team B.
+     */
+    public void oneGoalForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 1;
+        displayGoalForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Displays the given score for Team B.
+     */
+    public void displayGoalForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.goals_team_b);
+        scoreView.setText(String.valueOf(scoreTeamB));
     }
 }
