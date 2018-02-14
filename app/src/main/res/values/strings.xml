@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">World Cup 2018</string>
+    <string name="goals_text_team_a">0</string>
+    <string name="goals_text_team_b">0</string>
+    <string name="name_a_team">Name A</string>
+    <string name="name_b_team">Name B</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="goals">Goals</string>
+    <string name="yellow_cards_team_a">0</string>
+    <string name="yellow_cards_team_b">0</string>
+    <string name="red_cards_team_a">0</string>
+    <string name="red_cards_team_b">0</string>
+    <string name="groups_stage">Groups Stage</string>
+    <string name="reset">Reset</string>
 </resources>

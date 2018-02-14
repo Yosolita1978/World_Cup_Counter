@@ -25,7 +25,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="Name A"
+                android:text="@string/name_a_team"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="#616161"
                 android:textSize="34sp"/>
@@ -45,18 +45,18 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="decrement_goals"
-                    android:text="-"
+                    android:onClick="minusOneGoalForTeamA"
+                    android:text="@string/minus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
                 <TextView
-                    android:id="@+id/goals_text_view_team_a"
+                    android:id="@+id/goals_team_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="0"
+                    android:text="@string/goals_text_team_a"
                     android:textColor="@android:color/black"
                     android:textSize="26sp" />
 
@@ -68,10 +68,10 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="increment_goals"
-                    android:text="+"
+                    android:onClick="oneGoalForTeamA"
+                    android:text="@string/plus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
             </LinearLayout>
 
@@ -79,10 +79,8 @@
                 android:id="@+id/goals_title"
                 android:layout_width="190dp"
                 android:layout_height="40dp"
-                android:layout_alignLeft="@+id/button"
-                android:layout_alignStart="@+id/button"
                 android:gravity="center"
-                android:text="Goals"
+                android:text="@string/goals"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
             <LinearLayout
@@ -100,18 +98,18 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="decrement_yellow_cards"
-                    android:text="-"
+                    android:onClick="minusYellowCardForTeamA"
+                    android:text="@string/minus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
                 <TextView
-                    android:id="@+id/yellow_cards_text_view"
+                    android:id="@+id/yellow_cards_team_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="0"
+                    android:text="@string/yellow_cards_team_a"
                     android:textColor="@android:color/black"
                     android:textSize="26sp" />
 
@@ -123,16 +121,16 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="increment_yellow_cards"
-                    android:text="+"
+                    android:onClick="oneYellowCardForTeamA"
+                    android:text="@string/plus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/yellow_card"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/yellowcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
@@ -153,18 +151,18 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="decrement_red_cards"
-                    android:text="-"
+                    android:onClick="minusRedCardForTeamA"
+                    android:text="@string/minus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
                 <TextView
-                    android:id="@+id/red_cards_text_view"
+                    android:id="@+id/red_cards_team_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="0"
+                    android:text="@string/red_cards_team_a"
                     android:textColor="@android:color/black"
                     android:textSize="26sp" />
 
@@ -176,16 +174,16 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="increment_red_cards"
-                    android:text="+"
+                    android:onClick="oneRedCardForTeamA"
+                    android:text="@string/plus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/red_card"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/redcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
@@ -212,7 +210,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="Name B"
+                android:text="@string/name_b_team"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="#616161"
                 android:textSize="34sp" />
@@ -232,10 +230,10 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="decrement_goals"
-                    android:text="-"
+                    android:onClick="decrement_goals_team_b"
+                    android:text="@string/minus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
                 <TextView
                     android:id="@+id/goals_text_view_team_b"
@@ -243,7 +241,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="0"
+                    android:text="@string/goals_text_team_b"
                     android:textColor="@android:color/black"
                     android:textSize="26sp" />
 
@@ -255,10 +253,10 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
-                    android:onClick="increment_goals"
-                    android:text="+"
+                    android:onClick="increment_goals_team_b"
+                    android:text="@string/plus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
             </LinearLayout>
 
@@ -266,10 +264,8 @@
                 android:id="@+id/goals_title_team_b"
                 android:layout_width="190dp"
                 android:layout_height="40dp"
-                android:layout_alignLeft="@+id/button"
-                android:layout_alignStart="@+id/button"
                 android:gravity="center"
-                android:text="Goals"
+                android:text="@string/goals"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
             <LinearLayout
@@ -288,9 +284,9 @@
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
                     android:onClick="decrement_yellow_cards_team_b"
-                    android:text="-"
+                    android:text="@string/minus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
                 <TextView
                     android:id="@+id/yellow_cards_text_view_team_b"
@@ -298,7 +294,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="0"
+                    android:text="@string/yellow_cards_team_b"
                     android:textColor="@android:color/black"
                     android:textSize="26sp" />
 
@@ -311,15 +307,15 @@
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
                     android:onClick="increment_yellow_cards_team_b"
-                    android:text="+"
+                    android:text="@string/plus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/yellow_card_team_b"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/yellowcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
@@ -341,9 +337,9 @@
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
                     android:onClick="decrement_red_cards_team_b"
-                    android:text="-"
+                    android:text="@string/minus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
                 <TextView
                     android:id="@+id/red_cards_text_view_team_b"
@@ -351,7 +347,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="0"
+                    android:text="@string/red_cards_team_b"
                     android:textColor="@android:color/black"
                     android:textSize="26sp" />
 
@@ -364,15 +360,15 @@
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
                     android:onClick="increment_red_cards_team_b"
-                    android:text="+"
+                    android:text="@string/plus"
                     android:textColor="#ffffff"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/red_card_team_b"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/redcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
@@ -408,7 +404,7 @@
         android:layout_alignStart="@+id/button"
         android:layout_alignTop="@+id/logotipo_rusia"
         android:gravity="center_vertical"
-        android:text="Groups Stage"
+        android:text="@string/groups_stage"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <Button
@@ -418,7 +414,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="resetPointsForTeams"
-        android:text="Reset" />
+        android:onClick="resetAllScores"
+        android:text="@string/reset" />
 
 </RelativeLayout>
