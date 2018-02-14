@@ -41,7 +41,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
@@ -94,7 +96,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
@@ -134,7 +138,8 @@
                 android:src="@drawable/yellowcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:contentDescription="@string/yellow_card"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -147,7 +152,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
@@ -187,7 +194,8 @@
                 android:src="@drawable/redcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:contentDescription="@string/red_card"/>
 
         </LinearLayout>
 
@@ -226,7 +234,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
@@ -279,7 +289,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
@@ -319,7 +331,8 @@
                 android:src="@drawable/yellowcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:contentDescription="@string/yellow_card"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -332,7 +345,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:background="#1976d2"
@@ -372,7 +387,8 @@
                 android:src="@drawable/redcard"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:contentDescription="@string/red_card"/>
 
 
         </LinearLayout>
@@ -385,6 +401,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="14dp"
         android:layout_toLeftOf="@+id/fase_grupos"
@@ -394,7 +411,8 @@
         android:maxWidth="52dp"
         android:scaleType="fitCenter"
         android:src="@drawable/logotipo_rusia_2018"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:contentDescription="@string/logo"/>
 
     <TextView
         android:id="@+id/fase_grupos"

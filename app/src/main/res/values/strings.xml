@@ -13,4 +13,7 @@
     <string name="red_cards_team_b">0</string>
     <string name="groups_stage">Groups Stage</string>
     <string name="reset">Reset</string>
+    <string name="yellow_card">Soccer Yellow Card</string>
+    <string name="red_card">Soccer Red Card</string>
+    <string name="logo">Logo World Cup 2018</string>
 </resources>
