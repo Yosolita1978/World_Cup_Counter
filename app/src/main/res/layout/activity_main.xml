@@ -7,9 +7,92 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/groups_stage"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logotipo_rusia"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="84dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/logo"
+            android:maxHeight="52dp"
+            android:maxWidth="52dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logotipo_rusia_2018"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/fase_grupos"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginRight="43dp"
+            android:layout_weight="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="@string/groups_stage"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/set_names_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_text_team_a_name"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:backgroundTintMode="@android:color/black"
+            android:singleLine="true"
+            android:hint="@string/name_a_team"
+            android:textAlignment="center"
+            android:inputType="textCapWords"
+            android:textColor="#FFFFFF"/>
+
+            <EditText
+                android:id="@+id/edit_text_team_b_name"
+                android:layout_width="325dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:backgroundTintMode="@android:color/black"
+                android:singleLine="true"
+                android:hint="@string/name_b_team"
+                android:textAlignment="center"
+                android:inputType="textCapWords"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/btn_set_team_a_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClickSetTeamA"
+                android:text="@string/done"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_game_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="74dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -20,15 +103,16 @@
             tools:context="com.example.android.courtcounter.MainActivity">
 
             <TextView
+                android:id="@+id/team_a_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="@string/name_a_team"
+                android:ems="10"
+                android:hint="@string/name_a_team"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="#616161"
-                android:textSize="34sp"/>
+                android:textSize="24sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -197,6 +281,7 @@
                 android:layout_gravity="center"
                 android:contentDescription="@string/red_card"/>
 
+
         </LinearLayout>
 
         <View
@@ -213,15 +298,16 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/edittext_teamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="@string/name_b_team"
+                android:hint="@string/name_b_team"
+                android:ems="10"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="#616161"
-                android:textSize="34sp" />
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -395,44 +481,14 @@
 
     </LinearLayout>
 
-
-    <ImageView
-        android:id="@+id/logotipo_rusia"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="14dp"
-        android:layout_toLeftOf="@+id/fase_grupos"
-        android:layout_toStartOf="@+id/fase_grupos"
-        android:adjustViewBounds="true"
-        android:maxHeight="52dp"
-        android:maxWidth="52dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/logotipo_rusia_2018"
-        android:visibility="visible"
-        android:contentDescription="@string/logo"/>
-
-    <TextView
-        android:id="@+id/fase_grupos"
-        android:layout_width="190dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_alignTop="@+id/logotipo_rusia"
-        android:gravity="center_vertical"
-        android:text="@string/groups_stage"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
-
-    <Button
-        android:id="@+id/button"
-        android:textColor="#ffffff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="resetAllScores"
-        android:text="@string/reset" />
+        <Button
+            android:id="@+id/button"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="resetAllScores"
+            android:text="@string/reset" />
 
 </RelativeLayout>

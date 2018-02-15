@@ -18,14 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayGoalForTeamA(scoreTeamA);
-        displayYellowCardsForTeamA(yellowCardTeamA);
-        displayRedCardsForTeamA(redCardTeamA);
-        displayGoalForTeamB(scoreTeamB);
-        displayYellowCardsForTeamB(yellowCardTeamB);
-        displayRedCardsForTeamB(redCardTeamB);
-    }
+        showNamesTeams();
 
+    }
 
     /**
      * reset all the scores for Team A.
@@ -218,7 +213,31 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayGoalForTeamB(int score) {
+
         TextView scoreView = (TextView) findViewById(R.id.goals_team_b);
         scoreView.setText(String.valueOf(scoreTeamB));
     }
+
+//    public void btnClickSetTeamA(View v) {
+//        TextView displayTeamAName = (TextView) findViewById(R.id.team_a_name);
+//        EditText editTeamAName = (EditText) findViewById(R.id.edit_text_team_a_name);
+//        displayTeamAName.setText(editTeamAName.getText().toString());
+//        displayTeamAName.setTextSize(26);
+//
+//        View btnA = findViewById(R.id.btn_set_team_a_name);
+//        btnA.setVisibility(View.GONE);
+//        editTeamAName.setVisibility(View.GONE);
+//    }
+
+    public void showNamesTeams(){
+        View groupsLayout = findViewById(R.id.groups_stage);
+        View mainActivity = findViewById(R.id.main_game_activity);
+        View setNamesTeams = findViewById(R.id.set_names_team);
+        View resetbtn = findViewById(R.id.button);
+
+        mainActivity.setVisibility(View.GONE);
+        resetbtn.setVisibility(View.GONE);
+    }
+
+
 }
