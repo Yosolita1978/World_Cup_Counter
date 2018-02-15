@@ -3,6 +3,7 @@ package com.example.android.futbolcounter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         displayGoalForTeamB(scoreTeamB);
         displayYellowCardsForTeamB(yellowCardTeamB);
         displayRedCardsForTeamB(redCardTeamB);
+
+        showNamesTeams();
     }
 
     /**
@@ -218,16 +221,19 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(scoreTeamB));
     }
 
-//    public void btnClickSetTeamA(View v) {
-//        TextView displayTeamAName = (TextView) findViewById(R.id.team_a_name);
-//        EditText editTeamAName = (EditText) findViewById(R.id.edit_text_team_a_name);
-//        displayTeamAName.setText(editTeamAName.getText().toString());
-//        displayTeamAName.setTextSize(26);
-//
-//        View btnA = findViewById(R.id.btn_set_team_a_name);
-//        btnA.setVisibility(View.GONE);
-//        editTeamAName.setVisibility(View.GONE);
-//    }
+    public void btnClickSetNames (View v) {
+        TextView displayTeamAName = (TextView) findViewById(R.id.team_a_name);
+        TextView displayTeamBName = (TextView) findViewById(R.id.team_b_name);
+        EditText editTeamAName = (EditText) findViewById(R.id.edit_text_team_a_name);
+        EditText editTeamBName = (EditText) findViewById(R.id.edit_text_team_b_name);
+        displayTeamAName.setText(editTeamAName.getText().toString());
+        displayTeamBName.setText(editTeamBName.getText().toString());
+        displayTeamAName.setTextSize(26);
+        displayTeamBName.setTextSize(26);
+
+        showMainActivity();
+
+    }
 
     public void showNamesTeams(){
         View groupsLayout = findViewById(R.id.groups_stage);
@@ -235,8 +241,23 @@ public class MainActivity extends AppCompatActivity {
         View setNamesTeams = findViewById(R.id.set_names_team);
         View resetbtn = findViewById(R.id.button);
 
+        groupsLayout.setVisibility(View.VISIBLE);
+        setNamesTeams.setVisibility(View.VISIBLE);
         mainActivity.setVisibility(View.GONE);
         resetbtn.setVisibility(View.GONE);
+
+    }
+
+    public void showMainActivity(){
+        View groupsLayout = findViewById(R.id.groups_stage);
+        View mainActivity = findViewById(R.id.main_game_activity);
+        View setNamesTeams = findViewById(R.id.set_names_team);
+        View resetbtn = findViewById(R.id.button);
+
+        setNamesTeams.setVisibility(View.GONE);
+        groupsLayout.setVisibility(View.VISIBLE);
+        mainActivity.setVisibility(View.VISIBLE);
+        resetbtn.setVisibility(View.VISIBLE);
     }
 
 
