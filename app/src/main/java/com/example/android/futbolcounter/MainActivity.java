@@ -41,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
         displayYellowCardsForTeamB(yellowCardTeamB);
         displayRedCardsForTeamB(redCardTeamB);
 
+
         showNamesTeams();
+        TextView placeholderTeamA = (TextView) findViewById(R.id.edit_text_team_a_name);
+        TextView placeholderTeamB = (TextView) findViewById(R.id.edit_text_team_b_name);
+        placeholderTeamA.setText("");
+        placeholderTeamB.setText("");
     }
 
     /**

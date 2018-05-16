@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="groups_layout_marginTop">8dp</dimen>
+    <dimen name="groups_layout_width">50dp</dimen>
+    <dimen name="groups_layout_height">50dp</dimen>
+    <dimen name="groups_layout_marginLeft">84dp</dimen>
+    <dimen name="groups_layout_marginStart">84dp</dimen>
+    <dimen name="text_groups_layout_width">190dp</dimen>
+    <dimen name="text_groups_layout_height">50dp</dimen>
+    <dimen name="text_groups_layout_marginEnd">50dp</dimen>
+    <dimen name="text_groups_layout_marginRight">50dp</dimen>
+    <dimen name="text_teamA_layout_width">350dp</dimen>
+    <dimen name="text_teamA_layout_marginLeft">12dp</dimen>
+    <dimen name="text_teamA_layout_marginStart">12dp</dimen>
+    <dimen name="text_teamA_layout_marginEnd">12dp</dimen>
+    <dimen name="text_teamA_layout_marginRight">12dp</dimen>
+    <dimen name="text_teamB_layout_width">350dp</dimen>
+    <dimen name="text_teamB_layout_marginLeft">12dp</dimen>
+    <dimen name="text_teamB_layout_marginStart">12dp</dimen>
+    <dimen name="text_teamB_layout_marginEnd">12dp</dimen>
+    <dimen name="text_teamB_layout_marginRight">12dp</dimen>
+    <dimen name="main_activity_layout_marginTop">74dp</dimen>
+    <dimen name="block_layout_width">0dp</dimen>
+    <dimen name="text_teamA_padding">8dp</dimen>
+    <dimen name="text_A_textSize">24sp</dimen>
+    <dimen name="goals_layout_layout_marginTop">14dp</dimen>
+    <dimen name="buttons_textSize">26sp</dimen>
+    <dimen name="buttons_layout">48dp</dimen>
+    <dimen name="buttons_eight_margin">8dp</dimen>
+    <dimen name="buttons_sixteen_margin">16dp</dimen>
+    <dimen name="goals_title_layout_width">190dp</dimen>
+    <dimen name="goals_title_layout_height">40dp</dimen>
+    <dimen name="cards_layout_width">40dp</dimen>
+    <dimen name="cards_layout_height">40dp</dimen>
+    <dimen name="separation_layout_width">1dp</dimen>
+    <dimen name="separation_layout_marginBottom">65dp</dimen>
+    <dimen name="separation_layout_marginTop">16dp</dimen>
+</resources>
